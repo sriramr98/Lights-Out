@@ -16,4 +16,4 @@
 
 ---
 
--   You can visit the app at {toBeUploaded}
+-   You can visit the app [here](https://lights-out-portfolio.netlify.com/)
