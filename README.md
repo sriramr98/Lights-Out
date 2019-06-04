@@ -6,6 +6,8 @@
 -   Your goal is to turn off all the cells on the board.
     Have fun.
 
+---
+
 # NOTE - DEVS ONLY
 
 -   I know this game might be hard to win, but if you want to hack your way through this, you can use the React Dev tools to change the state of hasWon property.
@@ -17,3 +19,7 @@
 ---
 
 -   You can visit the app [here](https://lights-out-portfolio.netlify.com/)
+
+## Deployed using netlify
+
+## Style credit goes to [Thomas Trinca's Codepen](https://codepen.io/Trinca/pen/NAvpWa)
