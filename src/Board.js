@@ -83,19 +83,7 @@ class Board extends Component {
         this.setState({ board, hasWon });
     }
 
-    /** Render game board or winning message. */
-    render() {
-        if (this.state.hasWon) {
-            return (
-                <div className="Board-title">
-                    <div className="winner">
-                        <span className="neon-orange">YOU</span>
-                        <span className="neon-blue">WIN</span>
-                    </div>
-                </div>
-            );
-        }
-
+    makeTable() {
         let tableBoard = [];
         for (let y = 0; y < this.props.nRows; y++) {
             let row = [];
@@ -113,19 +101,35 @@ class Board extends Component {
             }
             tableBoard.push(<tr key={y}>{row}</tr>);
         }
+        return tableBoard;
+    }
 
+    /** Render game board or winning message. */
+    render() {
         return (
             <React.Fragment>
-                <div className="Board-title">
-                    <div className="neon-orange">Lights</div>
-                    <div className="neon-blue">Out</div>
-                </div>
-                <table className="Board">
-                    <tbody>{tableBoard}</tbody>
-                </table>
+                {this.state.hasWon ? (
+                    // The user won
+                    <div className="Board-title">
+                        <div className="winner">
+                            <span className="neon-orange">YOU</span>
+                            <span className="neon-blue">WIN</span>
+                        </div>
+                    </div>
+                ) : (
+                    // The user is still playing
+                    <React.Fragment>
+                        <div className="Board-title">
+                            <div className="neon-orange">Lights</div>
+                            <div className="neon-blue">Out</div>
+                        </div>
+                        <table className="Board">
+                            <tbody>{this.makeTable()}</tbody>
+                        </table>
+                    </React.Fragment>
+                )}
             </React.Fragment>
         );
-        // TODO
     }
 }
 
