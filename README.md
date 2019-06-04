@@ -1,4 +1,4 @@
-<div style='text-align:center'><img alt="Screenshot of Lights Out" src="https://res.cloudinary.com/dqi9vy2o0/image/upload/v1559690272/screenshot-1.png" /></div>
+<div style="text-align:center"><img alt="Screenshot of Lights Out" src="https://res.cloudinary.com/dqi9vy2o0/image/upload/v1559690272/screenshot-1.png" /></div>
 
 -   Lights out is a simple game where you are given a board with some cells lit and some un-lit.
 -   When you click on a cell, it reverses it's neighbours states and its own.
