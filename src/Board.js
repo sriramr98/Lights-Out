@@ -104,10 +104,14 @@ class Board extends Component {
         return tableBoard;
     }
 
+    handleCheatCode = e => {
+        console.log(e);
+    };
+
     /** Render game board or winning message. */
     render() {
         return (
-            <React.Fragment>
+            <div onKeyUp={this.handleCheatCode}>
                 {this.state.hasWon ? (
                     // The user won
                     <div className="Board-title">
@@ -128,7 +132,7 @@ class Board extends Component {
                         </table>
                     </React.Fragment>
                 )}
-            </React.Fragment>
+            </div>
         );
     }
 }

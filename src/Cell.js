@@ -15,6 +15,9 @@ import './Cell.css';
  **/
 
 class Cell extends Component {
+    static defaultProps = {
+        sound: 'https://s3.amazonaws.com/freecodecamp/simonSound4.mp3'
+    };
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -23,6 +26,8 @@ class Cell extends Component {
     handleClick(evt) {
         // call up to the board to flip cells around this cell
         this.props.flipCellsAroundMe();
+        const sound = new Audio(this.props.sound);
+        sound.play();
     }
 
     render() {
